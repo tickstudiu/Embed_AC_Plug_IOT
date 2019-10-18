@@ -2,6 +2,8 @@
 import React, {Component} from 'react';
 import Message from './Message';
 import _ from 'lodash';
+
+import { Spinner } from 'reactstrap';
 class MessageList extends Component {
   constructor(props){
     super(props);
@@ -13,6 +15,7 @@ class MessageList extends Component {
       this.getData(snapshot.val());
     });
   }
+
   getData(values){
     let messagesVal = values;
     let messages = _(messagesVal)
@@ -39,9 +42,14 @@ class MessageList extends Component {
         </div>
       )
     });
+
     return (
       <div>
-        {messageNodes}
+        
+        {messageNodes.length == 0 ? 
+        <Spinner/>
+        : 
+        messageNodes}
       </div>
     );
   }
