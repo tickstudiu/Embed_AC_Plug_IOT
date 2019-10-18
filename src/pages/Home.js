@@ -9,7 +9,7 @@ import MessageBox from '../components/MessageBox';
 
 import { Container, Row, Col } from 'reactstrap';
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
       <Container>
@@ -38,4 +38,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default Home;

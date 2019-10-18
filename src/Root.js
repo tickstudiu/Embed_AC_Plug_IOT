@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import firebase from 'firebase';
 
-import App from './pages/App';
+import Home from './pages/Home';
 import Control from './pages/Control';
 
 import Public from './services/hoc/Public';
@@ -32,7 +32,7 @@ class Root extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/" component={Public(App)} />
+                    <Route exact path="/" component={Public(Home)} />
                     <Route exact path="/control" component={Public(Control)} />
                 </Switch>
             </Router>
