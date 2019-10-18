@@ -9,6 +9,7 @@ import firebase from 'firebase';
 
 import App from './pages/App';
 import Control from './pages/Control';
+
 import Public from './services/hoc/Public';
 
 class Root extends React.Component {
